@@ -1,0 +1,216 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\title{Schr\"odinger equation}
+\author{Jean-Marc Nuzillard}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Assuming a matter particle may be described by a wave (a Louis de Broglie wave), this wave must 
+obey to a wave equation, like sound, light, or heat waves obey to an equation.
+The path along which the Schr\"{o}dinger equation (SE) for matter waves
+was obtained is somehow tortuous and no clear historical account of it is available.
+The SE may considered as an {\em axiom} and therefore has no need for a justification,
+apart the fact that it works when it must work.
+As an undergraduate student, our physics teacher attempted nevertheless to give us an idea of how the SE can be derived,
+even though this derivation must not be taken as a {\em proof}.
+
+The derivation of the SE starts with an assumption: a particle of mass $m$ is described by
+a function (the wave function) of the three spatial coordinates $x$, $y$, $z$
+and of the time coordinate. This function, named $\psi$ has complex values.
+Otherwise stated, the wave function is a complex-valued scalar field.
+
+\[
+\psi(x, y, z, t) \in \mathbb{C}
+\]
+
+When dealing with waves, everything becomes simpler with complex numbers.
+A particle, something that one might think of as a mathematical point 
+is described by a function that takes values in the whole three-dimensional space, at each time.
+The values of this function evolve during time, moreover in a deterministic way.
+So, if $\psi$ is known at some time $t$, then the SE should provide a way 
+to know what it becomes later.
+
+Knowing the value of $\psi$ at some time gives access to the density of presence probability of the particle.
+Considering a small (infinitesimal) volume $\mathrm{d}V$ around the point of coordinates $(x, y, z)$ then
+the probability of presence of the particle is
+
+\[
+\mathrm{d}p = |\psi(x,y,z,t)|^2 \mathrm{d}V
+\]
+
+The particle is therefore everywhere in space at any time but not everywhere with the same probability.
+The classical trajectory is replaced by the time evolution of the probability density function.
+
+The simpliest possible wavefunction is the planar sine wave. 
+A planar wave is defined by a direction of propagation, hereafter considered as the $x$-axis 
+of a set of orthogonal axis that defines space cartesian coordinates.
+This trick reduces what follows to what would happen in a 1-dimensional space.
+The SE is first established here for a planar wave, assuming that any physically meaningful wave function 
+can be decomposed into a sum of planar wave functions.
+This decomposition is a kind of generalized Fourier transformation and holds because
+we expect the SE to be a linear differential equation, what it is.
+
+So, we assume that an elementary sine planar, complex-valued, wave-function may be written as
+
+\[
+\psi(x, y, z, t) = \exp\left( 2\pi i \left[ \frac{x}{\lambda} - \frac{t}{T} \right] \right)
+\]
+
+\noindent in which the spatial periodicity of the wave (or wavelength) is $\lambda$
+and the temporal periodicity (or period) is $T$.
+It can be checked that $\psi(x+\lambda, t)=\psi(x, t)$ and $\psi(x, t+T)=\psi(x,t)$.
+The minus sign in the expression of the elementary wave function indicates a propagation along the $+x$ axis.
+
+How can be related the wave parameters $\lambda$ and $T$ to the mechanical behavior of a particle of mass $m$?
+
+Louis de Broglie associated a particle of momentum $p$ (product of mass and speed)
+with a matter wave of wavelength $\lambda$ so that
+
+\[
+\lambda = \frac{h}{p}
+\]
+
+\noindent in which $h$ is the Planck constant.
+The planet-model of the hydrogen atom in which the electron is submitted to the constraint of
+having the length of electron orbit being a integer multiple of the associated wavelength 
+provides the correct stability energy levels, as spectroscopically proved by measured differences between energy levels.
+
+The time periodicity defined by the period $T$ is related to the frequency $\nu = 1/T$. 
+The frequency of light wave is related to the energy quantum it carries by the Planck's relationship.
+It is assumed here that this relation holds identically for matter waves.
+
+\[
+E = h\nu = \frac{h}{T} \quad \mbox{or} \quad T = \frac{h}{E}
+\]
+
+\noindent in which E is now the total mechanical energy of the particle.
+
+The expression of the planar $\psi$ function may be rewritten
+
+\[
+\psi(x, y, z, t) = \exp\left(i \left[ x \frac{2\pi}{\lambda} - t \frac{2\pi}{T} \right] \right)
+\]
+
+\noindent that reduces to
+
+\[
+\psi(x, y, z, t) = \exp\left(i \left[ k x - \omega t \right] \right) \quad \mbox{with} \quad k=\frac{2\pi}{\lambda} \quad \mbox{and} \quad \omega=\frac{2\pi}{T}
+\]
+
+With the reduced Planck constant $\hbar = h/2\pi$
+
+\[
+E = \hbar k \quad \mbox{and} \quad p = \hbar k
+\]
+
+The latter equations associate the matter wave parameters $k$ and $\omega$, the spatial and temporal pulsations of a planar wave,
+with mechanical parameters of the corresponding particle, impulsion and energy.
+
+Energy here is the total mechanical energy.
+A new hypothesis is that the particle under consideration is submitted to forces
+that derive from a potential energy.
+Therefore its total energy is the sum of its kinetic energy $T$ and of a potentiel energy $V$ so that
+
+\[
+E = T + V \quad \mbox{or} \quad E = \frac{p^2}{2m} + V
+\]
+
+The law of the conservation of the total energy states that total energy of an isolated system is constant while
+kinetic and potential energies may interconvert.
+
+\section{Assembling the pieces}
+The derivative of $\psi$ as a function of the spatial coordinate $x$ gives
+
+\[ 
+\frac{\partial \psi}{\partial x} = ik\psi
+\]
+
+\noindent so that
+
+\[
+-i \hbar \frac{\partial \psi}{\partial x} = p \psi
+\]
+
+The particle impulsion appears as a multiplicative factor to $\psi$ by application of the operator
+
+\[
+\hat{p} = -i \hbar \frac{\partial}{\partial x}
+\]
+
+\noindent on $\psi$ itself.
+This does not directly give access to $p$ but to $p\psi$.
+Accessing the kinetic energy $T$ is possible through $p^2 \psi$, applying twice the operator associated to $p$:
+
+\[
+- \hbar^2 \frac{\partial^2 \psi}{\partial x^2} = p^2 \psi
+\]
+
+\noindent and
+
+\[
+- \frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} = T \psi
+\]
+
+Pushing further the same idea, the derivative of $\psi$ as a function of time gives
+
+\[ 
+\frac{\partial \psi}{\partial t} = -i \omega \psi
+\]
+
+\noindent so that
+
+\[
+i \hbar \frac{\partial \psi}{\partial t} = E \psi
+\]
+
+Multipling by $\psi$ the two terms of the classical expression of the total energy yields:
+
+\[
+T\psi + V\psi = E\psi
+\]
+
+\indent or
+
+\[
+- \frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V\psi = i \hbar \frac{\partial \psi}{\partial t}
+\]
+
+This equation is the one-dimensional version of the SE.
+
+In the general case, there are 3 space coordinates $x$, $y$, and $z$, and the particle momentum is a vector 
+with 3 coordinates $p_x$, $p_y$, and $p_z$, each associated to an operator:
+
+\[
+\hat{p_x}=-i \hbar \frac{\partial}{\partial x} \quad \hat{p_y}=-i \hbar \frac{\partial}{\partial y} \quad \hat{p_z}=-i \hbar \frac{\partial}{\partial z}
+\]
+
+The action of the operator associated to $p^2 = p_x^2 + p_y^2 + p_z^2$ can be written for any planar matter wave
+
+\[
+- \hbar^2  \left( \frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} + \frac{\partial^2 \psi}{\partial z^2} \right) =  p^2 \psi 
+\]
+
+\noindent also written
+
+\[
+- \hbar^2 \Delta \psi = p^2 \psi
+\]
+
+\noindent by the introduction of the Laplacian operator $\Delta$ that sums the three second partial derivatives of a function of space coordinates.
+
+Therefore, any planar matter wave, any superposition of planar waves, 
+and therefore any wave function associated to a matter particle obey the Schr\"{o}dinger equation:
+
+\[
+\boxed{
+- \frac{\hbar^2}{2m} \Delta \psi + V\psi = i \hbar \frac{\partial \psi}{\partial t}
+}
+\]
+\end{document}
