@@ -48,9 +48,9 @@ the probability of presence of the particle is
 The particle is therefore everywhere in space at any time but not everywhere with the same probability.
 The classical trajectory is replaced by the time evolution of the probability density function.
 
-The simpliest possible wavefunction is the planar sine wave. 
+The simplest possible wave function is the planar sine wave. 
 A planar wave is defined by a direction of propagation, hereafter considered as the $x$-axis 
-of a set of orthogonal axis that defines space cartesian coordinates.
+of a set of orthogonal axis that defines space Cartesian coordinates.
 This trick reduces what follows to what would happen in a 1-dimensional space.
 The SE is first established here for a planar wave, assuming that any physically meaningful wave function 
 can be decomposed into a sum of planar wave functions.
@@ -60,21 +60,21 @@ we expect the SE to be a linear differential equation, what it is.
 So, we assume that an elementary sine planar, complex-valued, wave-function may be written as
 
 \[
-\psi(x, y, z, t) = \exp\left( 2\pi i \left[ \frac{x}{\lambda} - \frac{t}{T} \right] \right)
+\psi(x, y, z, t) = \exp\left( 2\pi i \left[ \frac{x}{\lambda} - \frac{t}{\tau} \right] \right)
 \]
 
 \noindent in which the spatial periodicity of the wave (or wavelength) is $\lambda$
-and the temporal periodicity (or period) is $T$.
-It can be checked that $\psi(x+\lambda, t)=\psi(x, t)$ and $\psi(x, t+T)=\psi(x,t)$.
+and the temporal periodicity (or period) is $\tau$.
+It can be checked that $\psi(x+\lambda, t)=\psi(x, t)$ and $\psi(x, t+\tau)=\psi(x,t)$.
 The minus sign in the expression of the elementary wave function indicates a propagation along the $+x$ axis.
 
-How can be related the wave parameters $\lambda$ and $T$ to the mechanical behavior of a particle of mass $m$?
+How can be related the wave parameters $\lambda$ and $\tau$ to the mechanical behavior of a particle of mass $m$?
 
 Louis de Broglie associated a particle of momentum $p$ (product of mass and speed)
 with a matter wave of wavelength $\lambda$ so that
 
 \[
-\lambda = \frac{h}{p}
+\lambda = \frac{h}{p} \quad \mbox{or} \quad p = \frac{h}{\lambda}
 \]
 
 \noindent in which $h$ is the Planck constant.
@@ -82,12 +82,12 @@ The planet-model of the hydrogen atom in which the electron is submitted to the 
 having the length of electron orbit being a integer multiple of the associated wavelength 
 provides the correct stability energy levels, as spectroscopically proved by measured differences between energy levels.
 
-The time periodicity defined by the period $T$ is related to the frequency $\nu = 1/T$. 
+The time periodicity defined by the period $\tau$ is related to the frequency $\nu = 1/\tau$. 
 The frequency of light wave is related to the energy quantum it carries by the Planck's relationship.
 It is assumed here that this relation holds identically for matter waves.
 
 \[
-E = h\nu = \frac{h}{T} \quad \mbox{or} \quad T = \frac{h}{E}
+E = h\nu \quad \mbox{or} \quad E = \frac{h}{\tau}
 \]
 
 \noindent in which E is now the total mechanical energy of the particle.
@@ -95,19 +95,19 @@ E = h\nu = \frac{h}{T} \quad \mbox{or} \quad T = \frac{h}{E}
 The expression of the planar $\psi$ function may be rewritten
 
 \[
-\psi(x, y, z, t) = \exp\left(i \left[ x \frac{2\pi}{\lambda} - t \frac{2\pi}{T} \right] \right)
+\psi(x, y, z, t) = \exp\left(i \left[ x \frac{2\pi}{\lambda} - t \frac{2\pi}{\tau} \right] \right)
 \]
 
 \noindent that reduces to
 
 \[
-\psi(x, y, z, t) = \exp\left(i \left[ k x - \omega t \right] \right) \quad \mbox{with} \quad k=\frac{2\pi}{\lambda} \quad \mbox{and} \quad \omega=\frac{2\pi}{T}
+\psi(x, y, z, t) = \exp\left(i \left[ k x - \omega t \right] \right) \quad \mbox{with} \quad k=\frac{2\pi}{\lambda} \quad \mbox{and} \quad \omega=\frac{2\pi}{\tau}
 \]
 
 With the reduced Planck constant $\hbar = h/2\pi$
 
 \[
-E = \hbar k \quad \mbox{and} \quad p = \hbar k
+E = \hbar \omega \quad \mbox{and} \quad p = \hbar k
 \]
 
 The latter equations associate the matter wave parameters $k$ and $\omega$, the spatial and temporal pulsations of a planar wave,
@@ -116,14 +116,14 @@ with mechanical parameters of the corresponding particle, impulsion and energy.
 Energy here is the total mechanical energy.
 A new hypothesis is that the particle under consideration is submitted to forces
 that derive from a potential energy.
-Therefore its total energy is the sum of its kinetic energy $T$ and of a potentiel energy $V$ so that
+Therefore its total energy is the sum of its kinetic energy $T$ and of a potential energy $V$ so that
 
 \[
 E = T + V \quad \mbox{or} \quad E = \frac{p^2}{2m} + V
 \]
 
 The law of the conservation of the total energy states that total energy of an isolated system is constant while
-kinetic and potential energies may interconvert.
+kinetic and potential energies may inter-convert.
 
 \section{Assembling the pieces}
 The derivative of $\psi$ as a function of the spatial coordinate $x$ gives
@@ -170,7 +170,7 @@ Pushing further the same idea, the derivative of $\psi$ as a function of time gi
 i \hbar \frac{\partial \psi}{\partial t} = E \psi
 \]
 
-Multipling by $\psi$ the two terms of the classical expression of the total energy yields:
+Multiplying by $\psi$ the two terms of the classical expression of the total energy yields:
 
 \[
 T\psi + V\psi = E\psi
